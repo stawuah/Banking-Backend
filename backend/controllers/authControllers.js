@@ -30,7 +30,14 @@ const login = asyncHandler(async (req, res) => {
 
     setTimeout(() => {
       res.redirect(302, 'http://localhost:5000/home/');
-    }, 2000);
+    }, 4000);
+
+    if (resetPassword) {
+      setTimeout(() => {
+        res.redirect(302, 'http://localhost:5000/home/');
+      }, 2000);
+    }
+
 
   } else {
     res.status(400)
@@ -95,7 +102,7 @@ const registerCustomer = asyncHandler(async (req, res) => {
     res.status(201).json(savedCustomer)
 
     setTimeout(() => {
-      res.redirect(302, 'http://localhost:5000/home/');
+      res.redirect(302, 'http://localhost:5000/home/go-park');
     }, 3000);
 
   } catch (err) {
