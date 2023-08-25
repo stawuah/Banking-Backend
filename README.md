@@ -1,7 +1,7 @@
 
 # Banking-Backend
 
-# My Banking App with Plaid API Integration
+# Banking App with Plaid API Integration
 
 ## Introduction
 
